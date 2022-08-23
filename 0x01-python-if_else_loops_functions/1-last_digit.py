@@ -10,4 +10,4 @@ if lst == 0:
 elif lst < 6:
     print(f"Last digit of {n} is {lst} and is less than 6 and not 0")
 else:
-     print(f"Last digit of {n} is {lst} and is greater than 5")
+    print(f"Last digit of {n} is {lst} and is greater than 5")
