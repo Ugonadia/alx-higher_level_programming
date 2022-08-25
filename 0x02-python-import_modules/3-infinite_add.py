@@ -1,6 +1,7 @@
-import sys
-a = sys.argv[1]
-b = sys.argv[2]
-
-sum = a + b
-print(sum)
+#!/usr/bin/python3
+if __name__ == "__main__":
+  import sys
+  Sum = 0
+  for i in sys.argv[1:]:
+        sum += int(i)
+   print("{:d}".format(sum))
