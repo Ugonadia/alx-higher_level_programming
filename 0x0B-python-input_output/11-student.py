@@ -19,9 +19,18 @@ class Student:
         """
         if attrs is not None:
             dict_student = {}
-            for k in vars(self):
+            for k in self.__dict__:
                 if k in attrs:
-                    dict_student[k] = vars(self)[k]
+                    dict_student[k] = self.__dict__[k]
             return dict_student
         else:
-            return vars(self)
+            return self.__dict__
+
+    def reload_from_json(self, json):
+        """Replaces all attributes of the Student instance
+
+        Args:
+            json (dict): instance dictionary
+        """
+        if json:
+            self.__dict__ = json
