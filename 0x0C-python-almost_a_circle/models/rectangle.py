@@ -29,7 +29,6 @@ class Rectangle(Base):
     @property
     def width(self):
         """ Get width value
-        
         Returns:
             int: private instance attribute width of rectangle
         """
