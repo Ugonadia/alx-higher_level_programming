@@ -37,7 +37,7 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, value):
-        """set width value in private instance attribute 
+        """set width value in private instance attribute
 
         Args:
             value (int): width value
