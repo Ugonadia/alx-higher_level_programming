@@ -129,7 +129,8 @@ class Rectangle(Base):
     def __str__(self):
         """string representation of Rectangle
         """
-        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height))
+        return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id,
+                self.x, self.y, self.width, self.height))
 
     def update(self, *args, **kwargs):
         """Update the value of the Rectangle with arbitrary
