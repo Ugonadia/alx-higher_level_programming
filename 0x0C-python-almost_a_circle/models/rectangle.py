@@ -129,4 +129,25 @@ class Rectangle(Base):
     def __str__(self):
         """string representation of Rectangle
         """
-        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x, self.__y, self.__width, self.__height) 
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height)
+
+    def update(self, *args, **kwargs):
+        """Update the value of the Rectangle with arbitrary
+        arguments or keyword arguments
+        """
+        attr = ['id', 'width', 'height', 'x', 'y']
+        if args and args[0] is not None:
+            for idx in range(len(args)):
+                setattr(self, attr[idx], args[idx])
+        else:
+            for k, v in kwargs.items():
+                setattr(self, k, v)
+
+    def to_dictionary(self):
+        """dictionary representation of a Rectangle
+        Returns:
+            dict: attribute dictionary of Rectangle
+        """
+        new_dict = {'id': self.id, 'width': self.width, 'height': self.height,
+                    'x': self.x, 'y': self.y}
+        return new_dict
