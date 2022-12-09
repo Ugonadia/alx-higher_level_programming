@@ -13,7 +13,7 @@ if __name__ == '__main__':
     session = Session(bind=engine)
     element = session.query(State).filter(State.name == argv[4]).first()
     if element:
-            print('{}'.format(element.id))
+        print('{}'.format(element.id))
     else:
         print('Not found')
     session.close()
